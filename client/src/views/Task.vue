@@ -27,9 +27,9 @@
               <tr>
                 <th class="text-left">Title</th>
                 <th class="text-left">Description</th>
-                <th class="text-left">Deadline</th>
                 <th class="text-left">Project</th>
-                <th class="text-left">Create Date</th>
+                <th class="text-left">Create On</th>
+                <th class="text-left">Deadline</th>
                 <th class="text-left">Status</th>
               </tr>
             </thead>

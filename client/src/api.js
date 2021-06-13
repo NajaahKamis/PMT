@@ -10,6 +10,7 @@ export default class API {
 
     static async fetchAllUser() {
         const res = await axios.get(userUrl);
+        console.log(res)
         return res.data
     }
 

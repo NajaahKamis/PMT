@@ -39,9 +39,7 @@ mongoose.connect(process.env.DB_URI, {
 app.use("/api/task", require("./routes/routes"));
 app.use("/api/project", require("./routes/projectRoutes"));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'))
-})
+
 
 const user = require('./routes/api/user')
 app.use('/api/user', user)

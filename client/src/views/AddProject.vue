@@ -156,7 +156,6 @@ export default {
         
       }
       this.allUsers = data;
-      console.log(this.allUsers)
       
     },
     submit() {

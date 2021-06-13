@@ -156,6 +156,7 @@ export default {
 
      async getAllUser() {
       let newData = await API.fetchAllUser();
+      console.log(newData)
       let data = [];
       for (var i = 0; i < newData.length; i++) {
         let detail = {

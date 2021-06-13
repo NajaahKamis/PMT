@@ -1,14 +1,25 @@
 const Task = require("../models/tasks");
+const User = require("../models/User")
 
 const { reset } = require("nodemon");
 
 let task = {}
+let user = {}
 
 module.exports = class API {
     static async fetchAllTask(req, res) {
         try {
             const tasks = await Task.find();
             res.status(200).json(tasks);
+        } catch (err) {
+            res.status(404).json({ message: err.message });
+        }
+    }
+
+    static async fetchAllUser(req, res) {
+        try {
+            const users = await User.find();
+            res.status(200).json(users);
         } catch (err) {
             res.status(404).json({ message: err.message });
         }

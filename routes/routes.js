@@ -8,6 +8,7 @@ const API = require("../controllers/api")
 
 
 router.get("/", API.fetchAllTask);
+router.get("/", API.fetchAllUser);
 
 router.get("/:id", API.fetchById);
 router.post("/", upload.none(), API.createTask);

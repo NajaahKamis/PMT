@@ -31,7 +31,7 @@ const actions = {
         commit
     }, user) {
         commit('auth_request')
-        let res = await axios.post('http://localhost:5000/api/user/login', user)
+        let res = await axios.post('/api/user/login', user)
         if (res.data.success) {
             const token = res.data.token
             const user = res.data.user
@@ -51,7 +51,7 @@ const actions = {
         commit
     }) {
         commit('profile_request');
-        let response = await axios.get('http://localhost:5000/api/user/profile')
+        let response = await axios.get('/api/user/profile')
 
         commit('user_profile', response.data.user)
         return response
